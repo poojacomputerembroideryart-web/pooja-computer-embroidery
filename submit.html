@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Submitted | Pooja Embroidery</title>
+    <link rel="icon" type="image/png" href="logo234.png">
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        ::selection {
+            background-color: pink;
+            color: white;
+        }
+    </style>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f6f2ef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .success-box {
+            background: #ffffff;
+            padding: 70px 50px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #3a2c2c;
+        }
+
+        p {
+            color: #6a5f5f;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        /* Tick Circle */
+        .checkmark-circle {
+            width: 120px;
+            height: 120px;
+            background: #d94b6a;
+            border-radius: 50%;
+            margin: 0 auto 30px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: pop 0.6s ease;
+        }
+
+        .checkmark {
+            color: white;
+            font-size: 60px;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .home-btn {
+            background: #d94b6a;
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #b83c58;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="success-box">
+
+        <div class="checkmark-circle">
+            <div class="checkmark">✓</div>
+        </div>
+
+        <h1>Order Submitted Successfully!</h1>
+
+        <p>
+            Thank you for placing your custom embroidery order.
+            Our team will review your request and contact you shortly.
+            <br><br>
+            If you do not receive a response within 24 hours,
+            please contact the number provided on our website.
+        </p>
+
+        <a href="index.html" class="home-btn">Back to Home</a>
+
+    </div>
+
+</body>
+
+</html>

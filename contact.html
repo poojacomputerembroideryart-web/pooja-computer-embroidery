@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pooja Embroidery & Arts in Akola offering bridal mehndi, custom embroidery and art classes. 23+ years experience.">
+    <meta name="keywords" content="Bridal Mehndi Akola, Embroidery Akola, Art Classes Akola">
+    <meta name="author" content="Pooja Embroidery & Arts">
+    <meta property="og:title" content="Pooja Embroidery & Arts">
+    <meta property="og:description" content="Bridal Mehndi, Custom Embroidery & Art Classes in Akola.">
+    <meta property="og:image" content="logo234.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="logo234.png">
+
+
+
+    <title>Pooja Embroidery & Arts</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        ::selection {
+            background-color: pink;
+            color: white;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("_YgWvuU7ZAMddxCbN");
+        });
+    </script>
+
+
+
+
+    <style>
+        /* ---------------- GLOBAL ---------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f6f2ef;
+            color: #3a2c2c;
+            padding-top: 100px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: 700;
+            color: #d94b6a;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #777;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d94b6a;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background: #d94b6a;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 18px;
+        }
+
+        .social-icons a {
+            color: #444;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #d94b6a;
+            transform: scale(1.1);
+        }
+
+        .book-btn {
+            background: #d94b6a;
+            color: white;
+            padding: 8px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        /* ---------------- HERO ---------------- */
+
+        .embroidery-hero {
+            text-align: center;
+            padding: 120px 0 80px 0;
+            background: #efe9e6;
+        }
+
+        .embroidery-hero h1 {
+            font-size: 60px;
+            margin-bottom: 25px;
+        }
+
+        .embroidery-hero p {
+            font-size: 20px;
+            color: #6a5f5f;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* ---------------- CARDS ---------------- */
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 80px 0;
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.4s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            padding: 25px 25px 10px 25px;
+            font-size: 24px;
+        }
+
+        .card p {
+            padding: 0 25px 30px 25px;
+            color: #6a5f5f;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ---------------- CTA ---------------- */
+
+        .embroidery-cta {
+            padding: 100px 0;
+        }
+
+        .cta-box {
+            background: #e8dfd9;
+            padding: 80px 40px;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            max-width: 700px;
+            margin: auto;
+            margin-bottom: 40px;
+            color: #6a5f5f;
+            font-size: 18px;
+        }
+
+        .primary-btn {
+            background: #d94b6a;
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media(max-width:992px) {
+
+            .cards {
+                flex-direction: column;
+            }
+
+            /* ---------------- FOOTER ---------------- */
+
+            .footer {
+                background: #f6f2ef;
+                padding: 80px 0 40px 0;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                gap: 60px;
+            }
+
+            .footer-left {
+                width: 35%;
+            }
+
+            .footer-left h2 {
+                font-family: 'Playfair Display', serif;
+                font-size: 32px;
+                color: #d94b6a;
+                margin-bottom: 20px;
+            }
+
+            .footer-left p {
+                color: #666;
+                line-height: 1.7;
+            }
+
+            .footer-links h3,
+            .footer-contact h3 {
+                font-family: 'Playfair Display', serif;
+                margin-bottom: 20px;
+            }
+
+            .footer-links ul {
+                list-style: none;
+            }
+
+            .footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .footer-links a {
+                text-decoration: none;
+                color: #555;
+                transition: 0.3s;
+            }
+
+            .footer-links a:hover {
+                color: #d94b6a;
+            }
+
+            .footer-contact p {
+                margin-bottom: 12px;
+                color: #555;
+            }
+
+            .footer-contact i {
+                color: #d94b6a;
+                margin-right: 10px;
+            }
+
+            .footer-bottom {
+                text-align: center;
+                margin-top: 50px;
+                padding-top: 25px;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+                color: #666;
+                font-size: 14px;
+            }
+
+        }
+
+        /* ================= HERO ================= */
+
+        .contact-hero {
+            background: #d94b6a;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .contact-hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .contact-hero p {
+            font-size: 20px;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        /* ================= LAYOUT ================= */
+
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            gap: 40px;
+        }
+
+        /* ================= LEFT INFO ================= */
+
+        .contact-info {
+            width: 35%;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .info-icon {
+            background: #f3e3e8;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d94b6a;
+            font-size: 18px;
+        }
+
+        .info-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            color: #6a5f5f;
+            font-size: 15px;
+        }
+
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 30px 0;
+        }
+
+        /* ================= FORM ================= */
+
+        .contact-form {
+            width: 65%;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form p {
+            margin-bottom: 30px;
+            color: #6a5f5f;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            font-family: 'Poppins';
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        button {
+            background: #d94b6a;
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #c63f5d;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:992px) {
+            .contact-wrapper {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f6f2ef;
+            color: #3a2c2c;
+            padding-top: 100px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            position: relative;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d94b6a;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background: #d94b6a;
+            transition: 0.5s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: #d94b6a;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 18px;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            color: #444;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #d94b6a;
+            transform: scale(1.1);
+        }
+
+        .book-btn {
+            background: #d94b6a;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: 700;
+            color: #d94b6a;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #777;
+        }
+
+
+
+
+
+
+
+
+        /* ---------------- HERO ---------------- */
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .tag {
+            background: #f3e3d8;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            line-height: 1.1;
+        }
+
+        .hero-text h1 span {
+            color: #d94b6a;
+        }
+
+        .hero-text p {
+            margin: 25px 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .primary-btn {
+            background: #d94b6a;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .secondary-btn {
+            border: 2px solid #3a2c2c;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #3a2c2c;
+        }
+
+        .hero-img {
+            position: relative;
+        }
+
+        .hero-img img {
+            width: 420px;
+            border-radius: 25px;
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            color: #d94b6a;
+        }
+
+        /* ---------------- PASSION SECTION ---------------- */
+
+        .passion {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .passion h2 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .passion h2 span {
+            color: #d94b6a;
+        }
+
+        .passion p {
+            width: 60%;
+            margin: auto;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* ---------------- CARDS ---------------- */
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 50px 0;
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            min-height: 250px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            /* Important */
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(217, 75, 106, 0.25);
+        }
+
+
+
+        .card h3 {
+            font-size: 24px;
+        }
+
+        .card:hover h3 {
+            color: #d94b6a;
+        }
+
+
+        .card a {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            text-decoration: none;
+            color: #d94b6a;
+            font-weight: 600;
+        }
+
+        /* ---------------- WHY CHOOSE US ---------------- */
+
+        .why {
+            padding: 80px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .why-text {
+            width: 55%;
+        }
+
+        .why-text h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .why-text h3 {
+            margin-top: 20px;
+        }
+
+        .why-text p {
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .why-images {
+            width: 40%;
+            display: flex;
+            gap: 20px;
+        }
+
+        .why-images img {
+            width: 48%;
+            border-radius: 20px;
+        }
+
+        /* ---------------- CTA ---------------- */
+
+        .cta {
+            background: #d94b6a;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+        }
+
+        .cta p {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .cta a {
+            background: #f3e3d8;
+            color: #333;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media(max-width:992px) {
+
+            .hero {
+                flex-direction: column;
+            }
+
+            .hero-text {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .why {
+                flex-direction: column;
+            }
+
+            .why-text,
+            .why-images {
+                width: 100%;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .social-icons a {
+                color: #3a2c2c;
+                font-size: 18px;
+                transition: 0.3s;
+            }
+
+            .social-icons a:hover {
+                color: #d94b6a;
+                transform: scale(1.1);
+            }
+
+
+
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        .footer {
+            background: #f6f2ef;
+            padding: 80px 0 40px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .footer-left {
+            width: 35%;
+        }
+
+        .footer-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #d94b6a;
+            margin-bottom: 20px;
+        }
+
+        .footer-left p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .footer-links h3,
+        .footer-contact h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #555;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #d94b6a;
+        }
+
+        .footer-contact p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .footer-contact i {
+            color: #d94b6a;
+            margin-right: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            color: #666;
+            font-size: 14px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* HAMBURGER */
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #3a2c2c;
+            transition: 0.3s;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .nav-right {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 25px 0;
+                display: none;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-right.active {
+                display: flex;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .hero-img img {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .cards {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .card h3 {
+                font-size: 20px;
+            }
+
+            .passion h2 {
+                font-size: 30px;
+            }
+
+            .passion p {
+                width: 90%;
+                font-size: 14px;
+            }
+
+            .why {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .why-text {
+                width: 100%;
+            }
+
+            .why-text h2 {
+                font-size: 28px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-left {
+                width: 100%;
+            }
+
+            .footer-links,
+            .footer-contact {
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 26px;
+            }
+
+            .logo span {
+                font-size: 11px;
+            }
+
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            font-size: 20px;
+            padding: 12px 14px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container nav-container">
+
+            <div class="logo">
+                Pooja
+                <span> EMBROIDERY & ARTS</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right" id="navRight">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="embroidery.html">Embroidery</a>
+                    <a href="art.html">Art Classes</a>
+                    <a href="mehndi.html">Wedding Mehndi</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pooja_gandhi278/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+
+                <a href="contact.html" class="book-btn">Book Now</a>
+            </div>
+
+        </div>
+    </nav>
+    <section class="contact-hero">
+        <h1>Get in Touch</h1>
+        <p>
+            Ready to book a bridal mehndi session, order custom embroidery,
+            or join a class? We'd love to hear from you.
+        </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+
+                <!-- LEFT INFO -->
+                <div class="contact-info">
+                    <h2>Contact Info</h2>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>Message us on WhatsApp <p>
+                            <p>Mon-Sat 9am to 6pm</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>poojacomputerembroidery.art
+                                <br>@gmail.com
+                            </p>
+                            <p>18nishantzawar8a@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h3>Studio</h3>
+                            <p>Gajanan Maharaj mandir , adarash colony</p>
+                            <p>Akola, Maharashtra 444001</p>
+                        </div>
+                    </div> -->
+
+                    <div class="divider"></div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h3>Business Hours</h3>
+                            <p>Mon - Fri: 10:00 AM - 7:00 PM</p>
+                            <p>Sat: 10:00 AM - 5:00 PM</p>
+                            <p>Sun: Closed</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT FORM -->
+                <div class="contact-form">
+                    <h2>Place an Order / Inquiry</h2>
+                    <p>Fill out the form below and we will get back to you within 24 hours.</p>
+
+                    <form id="contactForm">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input id="fullname" type="text" placeholder="firstname lastname">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="text" id="phone" maxlength="10"
+                                    oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                                    placeholder="10 digit phone number">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input id="email" type="email" placeholder="name@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Service Interested In</label>
+                                <select id="service">
+                                    <option>Select a service</option>
+                                    <option>Custom Embroidery</option>
+                                    <option>Bridal Mehndi</option>
+                                    <option>Art Classes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Event Date (Optional)</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="form-group" style="margin-top:20px;">
+                            <label>Additional Details</label>
+                            <textarea placeholder="Tell us more about what you're looking for..."></textarea>
+                        </div>
+
+                        <div style="margin-top:30px;">
+                            <button type="submit">Submit Inquiry</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <div class="footer-left">
+                <h2>Pooja Embroidery</h2>
+                <p>
+                    Bringing art to life through intricate embroidery,
+                    stunning mehndi designs, and creative art classes for all ages.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="embroidery.html">Embroidery Collection</a></li>
+                    <li><a href="mehndi.html">Bridal Mehndi</a></li>
+                    <li><a href="art.html">Art Classes</a></li>
+                    <li><a href="contact.html">Book a Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i> Message us on WhatsApp </p>
+                <p><i class="fa-solid fa-envelope"></i> poojacomputerembroidery.art@gmail.com</p>
+                <!-- <p><i class="fa-solid fa-location-dot"></i> Gajanan Maharaj mandir , adarash colony , Akola</p> -->
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Pooja Embroidery & Art Classes. All rights reserved.
+        </div>
+    </footer>
+    <a href="https://wa.me/919422571345?text=Hello%20Pooja%20Embroidery,%20I%20want%20to%20book%20a%20service."
+        class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <!-- <iframe src="https://www.google.com/maps?q=Gajanan+Maharaj+Mandir+Akola&output=embed" width="100%" height="250"
+        style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy">
+    </iframe> -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = urlParams.get("service");
+
+            if (serviceParam) {
+                const serviceDropdown = document.getElementById("service");
+
+                for (let i = 0; i < serviceDropdown.options.length; i++) {
+                    if (serviceDropdown.options[i].text === serviceParam) {
+                        serviceDropdown.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+        });
+
+    </script>
+
+
+
+    <script>
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let name = document.getElementById("fullname").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let service = document.getElementById("service").value;
+            let eventDate = document.querySelector("input[type='date']").value;
+            let message = document.querySelector("textarea").value.trim();
+
+            let phonePattern = /^[0-9]{10}$/;
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!phonePattern.test(phone)) {
+                alert("Phone number must be exactly 10 digits.");
+                return;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Enter valid email address.");
+                return;
+            }
+
+            if (service === "Select a service") {
+                alert("Please select a service.");
+                return;
+            }
+
+            emailjs.send("service_b7scjcb", "template_quwj0ii", {
+                name: name,
+                phone: phone,
+                email: email,
+                service: service,
+                event_date: eventDate,
+                message: message
+            })
+                .then(function (response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                    alert("Inquiry sent successfully!");
+                    document.getElementById("contactForm").reset();
+                })
+                .catch(function (error) {
+                    console.error("FAILED...", error);
+                    alert("Failed to send. Check console for error.");
+                });
+
+        });
+
+    </script>
+    <script>
+        const links = document.querySelectorAll(".nav-links a");
+
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+    <script>
+        window.addEventListener("load", function () {
+            document.body.classList.add("loaded");
+        });
+    </script>
+
+    <script>
+
+        const hamburger = document.getElementById("hamburger");
+        const navRight = document.getElementById("navRight");
+
+        hamburger.addEventListener("click", function () {
+            navRight.classList.toggle("active");
+        });
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navRight.classList.remove("active");
+            });
+        });
+
+    </script>
+
+
+
+
+
+
+</html>

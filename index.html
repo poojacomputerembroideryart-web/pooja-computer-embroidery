@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja Embroidery & Arts</title>
+    <link rel="icon" type="image/png" href="logo234.png">
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        ::selection {
+            background-color: pink;
+            color: white;
+        }
+    </style>
+
+    <style>
+        /* ---------------- GLOBAL ---------------- */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f6f2ef;
+            color: #3a2c2c;
+            padding-top: 100px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            position: relative;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d94b6a;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background: #d94b6a;
+            transition: 0.5s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: #d94b6a;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 18px;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            color: #444;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #d94b6a;
+            transform: scale(1.1);
+        }
+
+        .book-btn {
+            background: #d94b6a;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: 700;
+            color: #d94b6a;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #777;
+        }
+
+
+
+
+
+
+
+
+        /* ---------------- HERO ---------------- */
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .tag {
+            background: #f3e3d8;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            line-height: 1.1;
+        }
+
+        .hero-text h1 span {
+            color: #d94b6a;
+        }
+
+        .hero-text p {
+            margin: 25px 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .primary-btn {
+            background: #d94b6a;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .secondary-btn {
+            border: 2px solid #3a2c2c;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #3a2c2c;
+        }
+
+        .hero-img {
+            position: relative;
+        }
+
+        .hero-img img {
+            width: 420px;
+            border-radius: 25px;
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            color: #d94b6a;
+        }
+
+        /* ---------------- PASSION SECTION ---------------- */
+
+        .passion {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .passion h2 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .passion h2 span {
+            color: #d94b6a;
+        }
+
+        .passion p {
+            width: 60%;
+            margin: auto;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* ---------------- CARDS ---------------- */
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 50px 0;
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            min-height: 250px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            /* Important */
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(217, 75, 106, 0.25);
+        }
+
+
+
+        .card h3 {
+            font-size: 24px;
+        }
+
+        .card:hover h3 {
+            color: #d94b6a;
+        }
+
+
+        .card a {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            text-decoration: none;
+            color: #d94b6a;
+            font-weight: 600;
+        }
+
+        /* ---------------- WHY CHOOSE US ---------------- */
+
+        .why {
+            padding: 80px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .why-text {
+            width: 55%;
+        }
+
+        .why-text h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .why-text h3 {
+            margin-top: 20px;
+        }
+
+        .why-text p {
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .why-images {
+            width: 40%;
+            display: flex;
+            gap: 20px;
+        }
+
+        .why-images img {
+            width: 48%;
+            border-radius: 20px;
+        }
+
+        /* ---------------- CTA ---------------- */
+
+        .cta {
+            background: #d94b6a;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+        }
+
+        .cta p {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .cta a {
+            background: #f3e3d8;
+            color: #333;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media(max-width:992px) {
+
+            .hero {
+                flex-direction: column;
+            }
+
+            .hero-text {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .why {
+                flex-direction: column;
+            }
+
+            .why-text,
+            .why-images {
+                width: 100%;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .social-icons a {
+                color: #3a2c2c;
+                font-size: 18px;
+                transition: 0.3s;
+            }
+
+            .social-icons a:hover {
+                color: #d94b6a;
+                transform: scale(1.1);
+            }
+
+
+
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        .footer {
+            background: #f6f2ef;
+            padding: 80px 0 40px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .footer-left {
+            width: 35%;
+        }
+
+        .footer-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #d94b6a;
+            margin-bottom: 20px;
+        }
+
+        .footer-left p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .footer-links h3,
+        .footer-contact h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #555;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #d94b6a;
+        }
+
+        .footer-contact p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .footer-contact i {
+            color: #d94b6a;
+            margin-right: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            color: #666;
+            font-size: 14px;
+        }
+
+        .card {
+            overflow: hidden;
+            /* VERY IMPORTANT */
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 20px 20px 20px 20px;
+            /* Only top rounded */
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* HAMBURGER */
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #3a2c2c;
+            transition: 0.3s;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .nav-right {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 25px 0;
+                display: none;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-right.active {
+                display: flex;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .hero-img img {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .cards {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .card h3 {
+                font-size: 20px;
+            }
+
+            .passion h2 {
+                font-size: 30px;
+            }
+
+            .passion p {
+                width: 90%;
+                font-size: 14px;
+            }
+
+            .why {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .why-text {
+                width: 100%;
+            }
+
+            .why-text h2 {
+                font-size: 28px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-left {
+                width: 100%;
+            }
+
+            .footer-links,
+            .footer-contact {
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 26px;
+            }
+
+            .logo span {
+                font-size: 11px;
+            }
+
+
+
+
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            font-size: 20px;
+            padding: 12px 14px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container nav-container">
+
+            <div class="logo">
+                Pooja
+                <span> EMBROIDERY & ARTS</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+            <div class="nav-right" id="navRight">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="embroidery.html">Embroidery</a>
+                    <a href="art.html">Art Classes</a>
+                    <a href="mehndi.html">Wedding Mehndi</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pooja_gandhi278/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+
+                <a href="contact.html" class="book-btn">Book Now</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <div class="hero-text">
+                <div class="tag">Est. 2002 • Akola </div>
+
+                <h1>
+                    Weaving Dreams <br>
+                    <span>Into Reality</span>
+                </h1>
+
+                <p>
+                    Specializing in intricate embroidery, breathtaking bridal mehndi,
+                    and fostering creativity through our diverse art classes.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="contact.html" class="primary-btn">Book an Appointment</a>
+                    <a href="art.html" class="secondary-btn">Join a Class</a>
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <img src="fef12bf0-7eb7-4290-a037-fd1cc906469c.png" alt="">
+                <div class="badge">500+ Happy Clients</div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- PASSION SECTION -->
+    <section class="passion">
+        <h4 style="color:#d94b6a; letter-spacing:2px;">OUR PASSION</h4>
+        <h2>Where Tradition Meets <span>Creativity</span></h2>
+        <p>
+            At Pooja Embroidery & Art Classes, we believe that every stitch tells a story
+            and every brushstroke expresses emotion. Founded with a passion for preserving
+            traditional arts while embracing modern aesthetics.
+        </p>
+    </section>
+
+    <!-- CARDS -->
+    <!-- CARDS -->
+    <div class="container">
+        <section class="cards">
+
+            <div class="card">
+                <img src="27e2176a-38aa-4932-9cbf-3ed08433c089.png" alt="Embroidery">
+                <h3>Custom Embroidery</h3>
+                <br>
+                <a href="embroidery.html">Learn More →</a>
+            </div>
+
+            <div class="card">
+                <img src="art1.png" alt="Art Classes">
+                <h3>Art Classes</h3>
+                <br>
+                <a href="art.html">Learn More →</a>
+            </div>
+
+            <div class="card">
+                <img src="mehndi.png" alt="Wedding Mehndi">
+                <h3>Wedding Mehndi</h3>
+                <br>
+                <a href="mehndi.html">Learn More →</a>
+            </div>
+
+        </section>
+    </div>
+
+
+    <!-- WHY CHOOSE US -->
+    <div class="container">
+        <section class="why">
+
+            <div class="why-text">
+                <h2>Why Choose Us?</h2>
+
+                <h3>Expert Craftsmanship</h3>
+                <p>Over 23 years of experience in intricate embroidery and detailed mehndi application.</p>
+
+                <h3>Personalized Approach</h3>
+                <p>Every order is custom-made to your preferences. Your vision is our blueprint.</p>
+
+                <h3>Organic Henna</h3>
+                <p>We use only 100% natural, chemical-free henna for safe, dark, and long-lasting stains.</p>
+
+            </div>
+
+            <!-- <div class="why-images">
+                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+            </div> -->
+
+        </section>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Ready to Create Something Beautiful?</h2>
+        <p>
+            Whether you need bridal mehndi, custom embroidery,
+            or want to learn a new skill, we are here for you.
+        </p>
+        <a href="contact.html">Get in Touch</a>
+    </section>
+
+</body>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
+
+        <div class="footer-left">
+            <h2>Pooja Embroidery</h2>
+            <p>
+                Bringing art to life through intricate embroidery,
+                stunning mehndi designs, and creative art classes for all ages.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="#">Embroidery Collection</a></li>
+                <li><a href="#">Bridal Mehndi</a></li>
+                <li><a href="#">Art Classes</a></li>
+                <li><a href="#">Book a Service</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-phone"></i> Message us on WhatsApp </p>
+            <p><i class="fa-solid fa-envelope"></i> poojacomputerembroidery.art@gmail.com</p>
+            <!-- <p><i class="fa-solid fa-location-dot"></i> Gajanan Maharaj mandir , adarash colony , Akola</p> -->
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Pooja Embroidery & Art Classes. All rights reserved.
+    </div>
+</footer>
+<a href="https://wa.me/919422571345?text=Hello%20Pooja%20Embroidery,%20I%20want%20to%20book%20a%20service."
+    class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+    const links = document.querySelectorAll(".nav-links a");
+
+    links.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+        }
+    });
+</script>
+<script>
+
+    const hamburger = document.getElementById("hamburger");
+    const navRight = document.getElementById("navRight");
+
+    hamburger.addEventListener("click", function () {
+        navRight.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navRight.classList.remove("active");
+        });
+    });
+
+
+</script>
+
+
+
+
+</html>
